@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>CRUD Task</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/style1.css" %}">
+</head>
+<body>
+    <div class="form-box">
+        <h2 style="text-decoration:underline;">Login</h2>
+        <br>
+        <form method="post" action="">
+         {% csrf_token %}
+        <div>
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Enter your username">
+        </div>
+        <div>
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter your password">
+        </div>
+        <br>
+        <button class="btn btn-md bg-primary mx-auto d-block px-3 py-1" type="submit">Submit</button>
+        </form>
+        <br>
+        <p>Don't have an account?<a href="{% url 'register'%}">Register</a></p>
+    </div>
+    
+</body>
+</html>
